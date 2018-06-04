@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <script src="./model.js"></script>
+    <script src="./dashboard.js"></script>
+    <style>
+        body {
+            background-color: linen;
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            text-align: center;
+        }
+        
+        #titleBar {
+            grid-area: titleBar;
+        }
+        #timerBar {
+            grid-area: timerBar;
+        }
+        #stateBar {
+            grid-area: stateBar;
+        }
+        #statsBar {
+            grid-area: statsBar;
+        }
+
+        .application {
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 2fr 3fr;
+            grid-template-areas: 
+                ". titleBar titleBar ."
+                "timerBar timerBar timerBar timerBar"
+                "stateBar stateBar stateBar stateBar"
+                "statsBar statsBar statsBar statsBar";
+        }
+    </style>
+</head>
+<body>
+    <div class="application">
+        <div class="component"id="titleBar" style="background-color: rgba(0,0,255,0.2); "></div>
+        <div class="component" id="timerBar" style="background-color: rgba(0,255,0,0.2);">TIMERBAR</div>
+        <div class="component" id="stateBar" style="background-color: rgba(255,0,0,0.2);">stateBar</div>
+        <div class="component" id="statsBar" style="background-color: rgba(15, 42, 82, 0.2);">statsBar</div>
+    </div>
+</body>
+</html>
